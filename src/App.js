@@ -1,17 +1,14 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
 import { connect } from "react-redux";
 
 class App extends Component {
   render() {
     const { fetching, dog, onRequestDog, error } = this.props;
-    
+    const image = dog ? <img src={dog} className="App-logo" alt="logo" /> : null;
     return (
       <div className="App">
         <header className="App-header">
-          <img src={dog || logo} className="App-logo" alt="logo" />
+          {image}
           <h1 className="App-title">Welcome to Dog Saga</h1>
         </header>
 
