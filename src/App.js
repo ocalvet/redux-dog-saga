@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 class App extends Component {
   render() {
     const { fetching, dog, onRequestDog, error } = this.props;
-    const image = dog ? <img src={dog} className="App-logo" alt="logo" /> : null;
+    const image = dog ? <img src={dog} alt="logo" /> : null;
     return (
       <div className="App">
         <header className="App-header">
